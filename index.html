@@ -1,152 +1,208 @@
-<!doctype html>
 <html>
+
 <head>
-  <script>
-    function Change(node){
-
- var j=document.getElementsByClassName("on");
-  for(var i=0;i<j.length;i++){
-    j[i].className="";
-    }  
-  node.className="on";  
-
-    }
-  </script>
-  <style>
-    .on{
-
-    background-color:black;
-}
-  </style>
-<title>index page</title>
+<title>
+spades tracker
+</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-  
-  <table border="1" style="border-collapse: collapse; width: 100%;">
-<tbody>
-<tr>
-<td style="width: 9%; background-color: #fd6864; text-align: center;">&diams;</td>
-<td onclick="Change(this)" style="width: 7%; background-color: #fd6864; text-align: center;">2</td>
-<td onclick="Change(this)" style="width: 7%; background-color: #fd6864; text-align: center;">3</td>
-<td style="width: 7%; background-color: #fd6864; text-align: center;">4</td>
-<td style="width: 7%; background-color: #fd6864; text-align: center;">5</td>
-<td style="width: 7%; background-color: #fd6864; text-align: center;">6</td>
-<td style="width: 7%; background-color: #fd6864; text-align: center;">7</td>
-<td style="width: 7%; background-color: #fd6864; text-align: center;">8</td>
-<td style="width: 7%; background-color: #fd6864; text-align: center;">9</td>
-<td style="width: 7%; background-color: #fd6864; text-align: center;">10</td>
-<td style="width: 7%; background-color: #fd6864; text-align: center;">J</td>
-<td style="width: 7%; background-color: #fd6864; text-align: center;">Q</td>
-<td style="width: 7%; background-color: #fd6864; text-align: center;">K</td>
-<td style="width: 7%; background-color: #fd6864; text-align: center;">A</td>
-</tr>
-<tr>
-<td style="width: 9%; background-color: #67fd9a; text-align: center;">&clubs;</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">2</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">3</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">4</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">5</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">6</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">7</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">8</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">9</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">10</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">J</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">Q</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">K</td>
-<td style="width: 7%; background-color: #67fd9a; text-align: center;">A</td>
-</tr>
-<tr>
-<td style="width: 9%; background-color: #fcff2f; text-align: center;">&hearts;</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">2</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">3</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">4</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">5</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">6</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">7</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">8</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">9</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">10</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">J</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">Q</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">K</td>
-<td style="width: 7%; background-color: #fcff2f; text-align: center;">A</td>
-</tr>
-<tr>
-<td style="width: 9%; background-color: #38fff8; text-align: center;">&spades;</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">2</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">3</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">4</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">5</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">6</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">7</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">8</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">9</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">10</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">J</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">Q</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">K</td>
-<td style="width: 7%; background-color: #38fff8; text-align: center;">A</td>
-</tr>
-</tbody>
+<body>
+<button onclick='reset()'>RESET</button>
+<button onclick='bga3()'>THREE PLAYER</button>
+<button onclick='undo()'>UNDO</button>
+<button onclick='resize()'>CHANGE SIZE</button>
+<br>
+<h3>
+Cards still in play
+</h3>
+<table> <!-- style='width500px'>-->
+    <tr class='colorRow'>
+        <td data-suit='0' onclick='clicked(this)'><p class='numberLabel'>1</p></td>
+        <td data-suit='0' onclick='clicked(this)'><p class='numberLabel'>2</p></td>
+        <td data-suit='0' onclick='clicked(this)'><p class='numberLabel'>3</p></td>
+        <td data-suit='0' onclick='clicked(this)'><p class='numberLabel'>4</p></td>
+        <td data-suit='0' onclick='clicked(this)'><p class='numberLabel'>5</p></td>
+        <td data-suit='0' onclick='clicked(this)'><p class='numberLabel'>6</p></td>
+        <td data-suit='0' onclick='clicked(this)'><p class='numberLabel'>7</p></td>
+        <td data-suit='0' onclick='clicked(this)'><p class='numberLabel'>8</p></td>
+        <td data-suit='0' onclick='clicked(this)'><p class='numberLabel'>9</p></td>
+    </tr>
+    <tr class='colorRow'>
+        <td data-suit='1' onclick='clicked(this)'><p class='numberLabel'>1</p></td>
+        <td data-suit='1' onclick='clicked(this)'><p class='numberLabel'>2</p></td>
+        <td data-suit='1' onclick='clicked(this)'><p class='numberLabel'>3</p></td>
+        <td data-suit='1' onclick='clicked(this)'><p class='numberLabel'>4</p></td>
+        <td data-suit='1' onclick='clicked(this)'><p class='numberLabel'>5</p></td>
+        <td data-suit='1' onclick='clicked(this)'><p class='numberLabel'>6</p></td>
+        <td data-suit='1' onclick='clicked(this)'><p class='numberLabel'>7</p></td>
+        <td data-suit='1' onclick='clicked(this)'><p class='numberLabel'>8</p></td>
+        <td data-suit='1' onclick='clicked(this)'><p class='numberLabel'>9</p></td>
+    </tr>
+    <tr class='colorRow'>
+        <td data-suit='2' onclick='clicked(this)'><p class='numberLabel'>1</p></td>
+        <td data-suit='2' onclick='clicked(this)'><p class='numberLabel'>2</p></td>
+        <td data-suit='2' onclick='clicked(this)'><p class='numberLabel'>3</p></td>
+        <td data-suit='2' onclick='clicked(this)'><p class='numberLabel'>4</p></td>
+        <td data-suit='2' onclick='clicked(this)'><p class='numberLabel'>5</p></td>
+        <td data-suit='2' onclick='clicked(this)'><p class='numberLabel'>6</p></td>
+        <td data-suit='2' onclick='clicked(this)'><p class='numberLabel'>7</p></td>
+        <td data-suit='2' onclick='clicked(this)'><p class='numberLabel'>8</p></td>
+        <td data-suit='2' onclick='clicked(this)'><p class='numberLabel'>9</p></td>
+    </tr>
+    <tr class='colorRow'>
+        <td data-suit='3' onclick='clicked(this)'><p class='numberLabel'>1</p></td>
+        <td data-suit='3' onclick='clicked(this)'><p class='numberLabel'>2</p></td>
+        <td data-suit='3' onclick='clicked(this)'><p class='numberLabel'>3</p></td>
+        <td data-suit='3' onclick='clicked(this)'><p class='numberLabel'>4</p></td>
+        <td data-suit='3' onclick='clicked(this)'><p class='numberLabel'>5</p></td>
+        <td data-suit='3' onclick='clicked(this)'><p class='numberLabel'>6</p></td>
+        <td data-suit='3' onclick='clicked(this)'><p class='numberLabel'>7</p></td>
+        <td data-suit='3' onclick='clicked(this)'><p class='numberLabel'>8</p></td>
+        <td data-suit='3' onclick='clicked(this)'><p class='numberLabel'>9</p></td>
+    </tr>
+    <tr class='colorRow'>
+        <td data-suit='4' onclick='clicked(this)' data-three='0'><p class='numberLabel'>1</p></td>
+        <td data-suit='4' onclick='clicked(this)'><p class='numberLabel'>2</p></td>
+        <td data-suit='4' onclick='clicked(this)'><p class='numberLabel'>3</p></td>
+        <td data-suit='4' onclick='clicked(this)'><p class='numberLabel'>4</p></td>
+    </tr>
 </table>
-<table border="0" style="border-collapse: collapse; width: 100%; height: 99px;">
-<tbody>
-<tr style="height: 25px;">
-<td style="width: 33.3333%; height: 25px;"></td>
-<td style="width: 33.3333%; height: 25px;"></td>
-<td style="width: 33.3333%; height: 25px;"></td>
-</tr>
-<tr style="height: 74px;">
-<td style="width: 33.3333%; height: 74px; text-align: center;">
-<p>Left Opp</p>
-<table border="1" style="border-collapse: collapse; width: 100%;">
-<tbody>
-<tr>
-<td style="width: 50%; background-color: #fd6864; border-style: solid; border-color: #000000;">&diams;</td>
-<td style="width: 50%; height: 21px; background-color: #67fd9a; border-style: solid; border-color: #000000;">&clubs;</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 21px; background-color: #fcff2f; border-style: solid; border-color: #000000;">&hearts;</td>
-<td style="width: 50%; height: 21px; background-color: #38fff8; border-style: solid; border-color: #000000;">&spades;</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td style="width: 33.3333%; height: 74px; text-align: center;">
-<p>Right Opp</p>
-<table border="1" style="border-collapse: collapse; width: 100%;">
-<tbody>
-<tr>
-<td style="width: 50%; background-color: #fd6864; border-style: solid; border-color: #000000;">&diams;</td>
-<td style="width: 50%; height: 21px; background-color: #67fd9a; border-style: solid; border-color: #000000;">&clubs;</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 21px; background-color: #fcff2f; border-style: solid; border-color: #000000;">&hearts;</td>
-<td style="width: 50%; height: 21px; background-color: #38fff8; border-style: solid; border-color: #000000;">&spades;</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td style="width: 33.3333%; height: 74px; text-align: center;">
-<p>Partner / Center Opp</p>
-<table border="1" style="border-collapse: collapse; width: 100%;">
-<tbody>
-<tr>
-<td style="width: 50%; background-color: #fd6864; border-style: solid; border-color: #000000;">&diams;</td>
-<td style="width: 50%; height: 21px; background-color: #67fd9a; border-style: solid; border-color: #000000;">&clubs;</td>
-</tr>
-<tr>
-<td style="width: 50%; height: 21px; background-color: #fcff2f; border-style: solid; border-color: #000000;">&hearts;</td>
-<td style="width: 50%; height: 21px; background-color: #38fff8; border-style: solid; border-color: #000000;">&spades;</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
+<h3>
+Suit ownership
+</h3>
+<table>
+    <tr>
+        <td colspan='2' class='right'><input style='width:100%' type='text' placeholder='Enter teammate name'></td>
+        <td colspan='2' class='middle'><input style='width:100%' type='text' placeholder='Enter teammate name'></td>
+        <td colspan='2' class='middle'><input style='width:100%' type='text' placeholder='Enter teammate name'></td>
+        <td colspan='2' class='left'><input style='width:100%' type='text' placeholder='Enter teammate name'></td>
+    </tr>
+    <tr>
+        <td colspan='2' class='right'>May be holding</td>
+        <td colspan='2' class='middle'>May be holding</td>
+        <td colspan='2' class='middle'>May be holding</td>
+        <td colspan='2' class='left'>May be holding</td>
+    </tr>
+    <tr class='colorRow'>
+        <td data-suit='0' onclick='clicked(this)'/>
+        <td data-suit='1' onclick='clicked(this)' class='right'/>
+        <td data-suit='0' onclick='clicked(this)' class='left'/>
+        <td data-suit='1' onclick='clicked(this)' class='right'/>
+        <td data-suit='0' onclick='clicked(this)' class='left'/>
+        <td data-suit='1' onclick='clicked(this)' class='right'/>
+        <td data-suit='0' onclick='clicked(this)' data-three='0' class='left'/>
+        <td data-suit='1' onclick='clicked(this)' data-three='0'/>
+    </tr>
+    <tr class='colorRow'>
+        <td data-suit='2' onclick='clicked(this)'/>
+        <td data-suit='3' onclick='clicked(this)' class='right'/>
+        <td data-suit='2' onclick='clicked(this)' class='left'/>
+        <td data-suit='3' onclick='clicked(this)' class='right'/>
+        <td data-suit='2' onclick='clicked(this)' class='left'/>
+        <td data-suit='3' onclick='clicked(this)' class='right'/>
+        <td data-suit='2' onclick='clicked(this)' data-three='0' class='left'/>
+        <td data-suit='3' onclick='clicked(this)' data-three='0'/>
+    </tr>
+    <tr class='colorRow'>
+        <td data-suit='4' onclick='clicked(this)'/>
+        <td class='right'/>
+        <td data-suit='4' onclick='clicked(this)' class='left'/>
+        <td class='right'/>
+        <td data-suit='4' onclick='clicked(this)' class='left'/>
+        <td class='right'/>
+        <td data-suit='4' onclick='clicked(this)' data-three='0' class='left'/>
+        <td/>
+    </tr>
 </table>
 
 </body>
+
+
+<script>
+var colors = [
+    [
+        'ED74A2', // Pink
+        'E9CF39', // Yellow
+        '118AC2', // Blue
+        '97C21B', // Green
+        '555555'  // Rocket
+    ],
+    [
+        'FFFFFF',
+        'FFFFFF',
+        'FFFFFF',
+        'FFFFFF',
+        'FFFFFF'
+    ],
+]
+
+var clickHistory = [];
+
+function toggle(div){
+    var newState = 1 - div.getAttribute('data-state');
+    div.setAttribute('data-state',newState);
+    var suit = div.getAttribute('data-suit');
+    if(suit == null){
+        return
+    }
+    div.bgColor = colors[newState][suit];
+}
+
+function undo(){
+    if(clickHistory.length == 0)
+        return
+    var div = clickHistory.pop();
+    toggle(div);
+}
+
+function clicked(div){
+    toggle(div);
+    clickHistory.push(div);
+}
+
+var rowHindex = 0;
+var rowHeights = [20,40,60,80,86,100,120,130,140];
+function resize() {
+    rowHindex = (rowHindex + 1)%rowHeights.length;
+    var rows = document.getElementsByClassName('colorRow');
+    var h = rowHeights[rowHindex];
+    for(i=0 ; i<rows.length ; i++){
+        rows[i].style.height = h;
+    }
+    var labels = document.getElementsByClassName('numberLabel');
+    var h2 = h/2;
+    for(i=0 ; i<labels.length ; i++){
+        labels[i].style.fontSize = h2;
+    }
+}
+
+function reset(){
+    var i,cell;
+    var cells = document.getElementsByTagName('td');
+    clickHistory = [];
+    for(i=0 ; i<cells.length ; i++){
+        cell = cells[i];
+        cell.setAttribute('data-state',1);
+        toggle(cells[i]);
+    }
+}
+
+function bga3(){
+    var i,cell,suit;
+    var cells = document.getElementsByTagName('td');
+    for(i=0 ; i<cells.length ; i++){
+        cell = cells[i];
+        suit = cell.getAttribute('data-suit');
+        if(suit == 3 || cell.getAttribute('data-three') == 0){
+            cell.bgColor = colors[1][suit];
+            cell.setAttribute('data-state',1);
+        }
+    }
+}
+
+reset();
+
+</script>
+
 </html>
